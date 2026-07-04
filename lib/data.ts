@@ -101,7 +101,7 @@ export const projects = [
     liveUrl: "#",
     githubUrl: "#",
     featured: true,
-    // image: "/project1.jpg",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
   },
   {
     id: 2,
@@ -113,6 +113,8 @@ export const projects = [
     liveUrl: "#",
     githubUrl: "#",
     featured: true,
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+
   },
   {
     id: 3,
@@ -124,6 +126,8 @@ export const projects = [
     liveUrl: "#",
     githubUrl: "#",
     featured: true,
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+
   },
   {
     id: 4,
@@ -135,6 +139,8 @@ export const projects = [
     liveUrl: "#",
     githubUrl: "#",
     featured: false,
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+
   },
   {
     id: 5,
@@ -146,6 +152,8 @@ export const projects = [
     liveUrl: "#",
     githubUrl: "#",
     featured: false,
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+
   },
   {
     id: 6,
@@ -157,6 +165,8 @@ export const projects = [
     liveUrl: "#",
     githubUrl: "#",
     featured: false,
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+
   },
 ];
 
