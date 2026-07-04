@@ -13,7 +13,7 @@ const iconMap: Record<string, React.ElementType> = {
 type Category = keyof typeof skills;
 
 export default function SkillsPage() {
-  const [active, setActive] = useState<Category>("Frontend");
+  const [active, setActive] = useState<Category>("Programming");
   const categories = Object.keys(skills) as Category[];
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });

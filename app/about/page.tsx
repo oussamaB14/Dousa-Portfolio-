@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import {
   Briefcase,
@@ -9,50 +9,8 @@ import {
   Lightbulb,
   ChevronRight,
 } from "lucide-react";
-import { experienceTimeline, personalInfo } from "@/lib/data";
+import { aboutContent, experienceTimeline } from "@/lib/data";
 import SectionHeading from "@/components/section-heading";
-
-function AnimatedCounter({
-  target,
-  suffix,
-}: {
-  target: number;
-  suffix: string;
-}) {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const [started, setStarted] = useState(false);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setStarted(true);
-      },
-      { threshold: 0.5 },
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-  useEffect(() => {
-    if (!started) return;
-    let current = 0;
-    const step = Math.ceil(target / 40);
-    const interval = setInterval(() => {
-      current += step;
-      if (current >= target) {
-        current = target;
-        clearInterval(interval);
-      }
-      setCount(current);
-    }, 30);
-    return () => clearInterval(interval);
-  }, [started, target]);
-  return (
-    <span ref={ref}>
-      {count}
-      {suffix}
-    </span>
-  );
-}
 
 export default function AboutPage() {
   const ref = useRef(null);
@@ -71,61 +29,41 @@ export default function AboutPage() {
         >
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-[var(--text-heading)]">
-              Passionate about crafting{" "}
+              {aboutContent.headline}{" "}
               <span className="text-gradient">
-                exceptional digital experiences
+                {aboutContent.headlineHighlight}
               </span>
             </h3>
-            <p className="text-[var(--text-muted)] leading-relaxed">
-              I&apos;m Ferdaous Sarhani, a Senior Full-Stack Developer with over{" "}
-              {personalInfo.yearsOfExperience} years of experience building
-              premium web applications. I specialize in React, Next.js, and
-              modern JavaScript ecosystems, delivering products that are fast,
-              accessible, and beautiful.
-            </p>
-            <p className="text-[var(--text-muted)] leading-relaxed">
-              My approach combines technical excellence with design sensibility.
-              I believe great software is born at the intersection of
-              performance, usability, and visual craft. Every pixel, every
-              interaction, every millisecond matters.
-            </p>
+            {aboutContent.paragraphs.map((paragraph, i) => (
+              <p key={i} className="text-[var(--text-muted)] leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
             <div className="grid grid-cols-2 gap-4 pt-4">
-              <div className="rounded-xl border border-[var(--border)] bg-[var(--card-bg)] p-4">
-                <Briefcase className="h-5 w-5 text-sky-400 mb-2" />
-                <p className="text-lg font-semibold text-[var(--text-heading)]">
-                  8+ Years
-                </p>
-                <p className="text-xs text-[var(--text-muted)]">
-                  Professional Experience
-                </p>
-              </div>
-              <div className="rounded-xl border border-[var(--border)] bg-[var(--card-bg)] p-4">
-                <Award className="h-5 w-5 text-violet-400 mb-2" />
-                <p className="text-lg font-semibold text-[var(--text-heading)]">
-                  12 Awards
-                </p>
-                <p className="text-xs text-[var(--text-muted)]">
-                  Industry Recognition
-                </p>
-              </div>
-              <div className="rounded-xl border border-[var(--border)] bg-[var(--card-bg)] p-4">
-                <Target className="h-5 w-5 text-emerald-400 mb-2" />
-                <p className="text-lg font-semibold text-[var(--text-heading)]">
-                  100%
-                </p>
-                <p className="text-xs text-[var(--text-muted)]">
-                  Client Satisfaction
-                </p>
-              </div>
-              <div className="rounded-xl border border-[var(--border)] bg-[var(--card-bg)] p-4">
-                <Lightbulb className="h-5 w-5 text-amber-400 mb-2" />
-                <p className="text-lg font-semibold text-[var(--text-heading)]">
-                  127+
-                </p>
-                <p className="text-xs text-[var(--text-muted)]">
-                  Projects Completed
-                </p>
-              </div>
+              {aboutContent.highlights.map((item, i) => {
+                const icons = [Briefcase, Award, Target, Lightbulb];
+                const colors = [
+                  "text-sky-400",
+                  "text-violet-400",
+                  "text-emerald-400",
+                  "text-amber-400",
+                ];
+                const Icon = icons[i] ?? Briefcase;
+                return (
+                  <div
+                    key={item.label}
+                    className="rounded-xl border border-[var(--border)] bg-[var(--card-bg)] p-4"
+                  >
+                    <Icon className={`h-5 w-5 ${colors[i]} mb-2`} />
+                    <p className="text-lg font-semibold text-[var(--text-heading)]">
+                      {item.label}
+                    </p>
+                    <p className="text-xs text-[var(--text-muted)]">
+                      {item.description}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
 

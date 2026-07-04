@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Sparkles } from "lucide-react";
-import { heroRoles } from "@/lib/data";
+import { heroBio, heroRoles } from "@/lib/data";
 
 function RoleChanger() {
   const [index, setIndex] = useState(0);
@@ -41,7 +41,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--input-bg)] px-4 py-1.5 text-sm text-[var(--text-muted)] mb-8"
         >
           <Sparkles className="h-3.5 w-3.5 text-sky-400" />
-          Available for freelance projects
+          Open to internships & junior roles
         </motion.div>
 
         <motion.h1
@@ -68,9 +68,7 @@ export default function Hero() {
           transition={{ delay: 0.3 }}
           className="mx-auto max-w-2xl text-base sm:text-lg text-[var(--text-muted)] mb-10 leading-relaxed"
         >
-          Senior Full-Stack Developer crafting premium digital experiences with
-          React, Next.js, and modern technologies. I turn complex problems into
-          elegant solutions.
+          {heroBio}
         </motion.p>
 
         <motion.div
@@ -93,7 +91,7 @@ export default function Hero() {
             View Projects
           </Link>
           <a
-            href="/resume.pdf"
+            href="/Sarhani Ferdaous CV.pdf"
             className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--input-bg)] px-8 py-3.5 text-sm font-semibold text-[var(--text)] hover:bg-[var(--surface-hover)] transition-colors"
           >
             <Download className="h-4 w-4" /> Resume

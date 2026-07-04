@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ferdaous Sarhani | Senior Full-Stack Developer",
+  title: "Ferdaous Sarhani | AI & Data Science Engineer",
   description:
-    "Premium web developer portfolio showcasing React, Next.js, TypeScript projects and services.",
+    "Portfolio of Ferdaous Sarhani — AI & Data Science Engineering student specializing in machine learning, RAG agents, and full-stack development.",
 };
 
 export default function RootLayout({

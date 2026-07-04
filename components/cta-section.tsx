@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { personalInfo } from "@/lib/data";
 
 export default function CTASection() {
@@ -20,14 +20,14 @@ export default function CTASection() {
             Ready to Build Something <span className="text-gradient">Amazing?</span>
           </h2>
           <p className="text-lg text-[var(--text-muted)] mb-10 max-w-2xl mx-auto">
-            I help ambitious teams and founders turn ideas into premium digital products. Let&apos;s discuss your next project.
+            Looking for an internship or junior role in Data Engineering, Machine Learning, or AI Development? Let&apos;s connect.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/contact" className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-violet-500 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition-all hover:shadow-sky-500/40">
               Start a Project <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
-            <a href={personalInfo.calendly} target="_blank" rel="noopener" className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--input-bg)] px-8 py-3.5 text-sm font-semibold text-[var(--text)] hover:bg-[var(--surface-hover)] transition-colors">
-              <Calendar className="h-4 w-4" /> Book a Call
+            <a href={`mailto:${personalInfo.email}`} className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--input-bg)] px-8 py-3.5 text-sm font-semibold text-[var(--text)] hover:bg-[var(--surface-hover)] transition-colors">
+              <Mail className="h-4 w-4" /> Send an Email
             </a>
           </div>
         </motion.div>

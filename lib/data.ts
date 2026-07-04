@@ -1,23 +1,39 @@
 export const personalInfo = {
   name: "Ferdaous Sarhani",
-  email: "hello@muddsarqayyum.dev",
-  phone: "+92 300 1234567",
-  location: "Muzaffarabad, AJK",
-  github: "https://github.com/muddsarqayyum",
-  linkedin: "https://linkedin.com/in/muddsarqayyum",
-  twitter: "https://twitter.com/muddsarqayyum",
-  calendly: "https://calendly.com/muddsarqayyum",
-  whatsapp: "https://wa.me/923001234567",
-  yearsOfExperience: 8,
+  email: "ferdaouss.sarhani@gmail.com",
+  phone: "+216 23 606 003",
+  location: "Mégrine, Ben Arous, Tunisia",
+  github: "https://github.com/SarhaniFerdaous",
+  gitlab: "https://gitlab.com/FerdaousSarhani",
+  linkedin: "https://www.linkedin.com/in/ferdaous-sarhani",
+  whatsapp: "https://wa.me/21623606003",
 };
 
 export const heroRoles = [
+  "AI & Data Science Student",
+  "Machine Learning Engineer",
   "Full-Stack Developer",
-  "UI/UX Engineer",
-  "React Specialist",
-  "Next.js Expert",
-  "TypeScript Architect",
+  "RAG & LLM Developer",
+  "Data Science Enthusiast",
 ];
+
+export const heroBio =
+  "AI & Data Science Engineering student building end-to-end ML systems, RAG-based agents, and full-stack applications. Ranked Top 10 nationally on Kaggle and Top 32 globally at Orange Digital Center Champions 2025.";
+
+export const aboutContent = {
+  headline: "Building intelligent systems",
+  headlineHighlight: "at the intersection of AI and software",
+  paragraphs: [
+    "I'm Ferdaous Sarhani, an AI & Data Science Engineering student at TEK-UP University with a Bachelor's degree in Business Computing from ESSEC. I build end-to-end AI/ML systems, RAG-based agents, full-stack web applications, and data pipelines.",
+    "Ranked Top 10 of 126 teams in a national Kaggle competition and Top 32 of 392 teams across 14 countries in Orange Digital Center Champions 2025, I'm seeking an internship or junior role in Data Engineering, Machine Learning, or AI Development.",
+  ],
+  highlights: [
+    { label: "6+ Projects", description: "AI, ML & Full-Stack", icon: "Briefcase" },
+    { label: "Top 10", description: "National Kaggle Rank", icon: "Award" },
+    { label: "Top 32", description: "Global Competition", icon: "Target" },
+    { label: "3 Languages", description: "Arabic · English · French", icon: "Lightbulb" },
+  ],
+};
 
 export const navLinks = [
   { href: "/", label: "Home" },
@@ -31,36 +47,44 @@ export const navLinks = [
 ];
 
 export const stats = [
-  { label: "Years Experience", value: 8, suffix: "+" },
-  { label: "Projects Delivered", value: 127, suffix: "+" },
-  { label: "Happy Clients", value: 85, suffix: "+" },
-  { label: "Awards Won", value: 12, suffix: "" },
+  { label: "Projects Built", value: 6, suffix: "+" },
+  { label: "Kaggle National Rank", value: 9, suffix: "th" },
+  { label: "Global Competition Rank", value: 32, suffix: "" },
+  { label: "Languages Spoken", value: 3, suffix: "" },
 ];
 
 export const experienceTimeline = [
   {
-    year: "2022 - Present",
-    role: "Senior Full-Stack Developer",
-    company: "TechFlow Solutions",
+    year: "2025 – Present",
+    role: "Vice Chair Technical Activities (VCTA)",
+    company: "IEEE TEK-UP Student Branch",
     description:
-      "Leading a team of 5 engineers building enterprise SaaS platforms. Architected micro-frontend systems and scaled APIs to 1M+ requests/day.",
-    highlights: ["React", "Next.js", "Node.js", "AWS"],
+      "Leading technical workshops, study groups, and coding sessions for the TEK-UP IEEE student branch.",
+    highlights: ["Workshops", "Study Groups", "IEEE"],
   },
   {
-    year: "2019 - 2022",
-    role: "Frontend Lead",
-    company: "PixelCraft Agency",
+    year: "2024 – 2025",
+    role: "PFE Intern — AI/ML Developer",
+    company: "Tritux",
     description:
-      "Built premium marketing sites and web apps for Fortune 500 clients. Established design systems and component libraries.",
-    highlights: ["TypeScript", "Tailwind", "Framer Motion", "GSAP"],
+      "Built ML models and REST APIs for the Soulier d'Or football platform. Deployed vote-prediction and user-segmentation models with Grafana monitoring dashboards.",
+    highlights: ["Python", "Deep Learning", "Grafana", "REST APIs"],
   },
   {
-    year: "2017 - 2019",
-    role: "Web Developer",
-    company: "StartUp Inc",
+    year: "2024 – 2025",
+    role: "Human Resources Assistant",
+    company: "infoLAB ESSECT",
     description:
-      "Full-stack development for early-stage products. Owned frontend architecture and CI/CD pipelines.",
-    highlights: ["React", "GraphQL", "PostgreSQL", "Docker"],
+      "Coordinated recruitment, onboarding, and internal communications for a student technology lab.",
+    highlights: ["Recruitment", "Onboarding", "Communications"],
+  },
+  {
+    year: "2021 – 2023",
+    role: "Marketing & Talent Management Manager",
+    company: "AIESEC TACAPES",
+    description:
+      "Built data-driven marketing campaigns and led full recruitment cycles. Developed data processing skills using Google Sheets and reporting tools.",
+    highlights: ["Marketing", "Talent Management", "Leadership"],
   },
 ];
 
@@ -68,123 +92,137 @@ export const skills: Record<
   string,
   { name: string; level: number; icon: string }[]
 > = {
-  Frontend: [
-    { name: "React", level: 98, icon: "Atom" },
-    { name: "Next.js", level: 96, icon: "Globe" },
-    { name: "TypeScript", level: 95, icon: "FileCode" },
-    { name: "Tailwind CSS", level: 97, icon: "Paintbrush" },
-    { name: "Framer Motion", level: 92, icon: "Sparkles" },
-    { name: "GSAP", level: 88, icon: "Zap" },
+  Programming: [
+    { name: "Python", level: 92, icon: "FileCode" },
+    { name: "JavaScript", level: 85, icon: "Braces" },
+    { name: "Java", level: 80, icon: "FileCode" },
+    { name: "PHP", level: 78, icon: "Server" },
+    { name: "SQL", level: 85, icon: "Database" },
+    { name: "HTML/CSS", level: 88, icon: "Paintbrush" },
   ],
-  Backend: [
-    { name: "Node.js", level: 94, icon: "Server" },
-    { name: "PostgreSQL", level: 90, icon: "Database" },
-    { name: "GraphQL", level: 87, icon: "Route" },
-    { name: "Redis", level: 82, icon: "Layers" },
+  "AI / ML": [
+    { name: "TensorFlow", level: 82, icon: "Sparkles" },
+    { name: "PyTorch", level: 80, icon: "Sparkles" },
+    { name: "scikit-learn", level: 85, icon: "Atom" },
+    { name: "LangChain", level: 88, icon: "Route" },
+    { name: "RAG & LLMs", level: 90, icon: "Zap" },
+    { name: "NLP", level: 83, icon: "BookOpen" },
   ],
-  DevOps: [
-    { name: "Docker", level: 85, icon: "Container" },
-    { name: "AWS", level: 80, icon: "Cloud" },
-    { name: "CI/CD", level: 83, icon: "Repeat" },
-    { name: "Vercel", level: 95, icon: "Zap" },
+  "Web & Mobile": [
+    { name: "React", level: 85, icon: "Atom" },
+    { name: "Node.js", level: 82, icon: "Server" },
+    { name: "Streamlit", level: 88, icon: "Globe" },
+    { name: "Bootstrap", level: 80, icon: "Layout" },
+    { name: "JavaFX", level: 78, icon: "PenTool" },
+    { name: "Android Studio", level: 75, icon: "Globe" },
+  ],
+  Databases: [
+    { name: "MySQL", level: 85, icon: "Database" },
+    { name: "MongoDB", level: 80, icon: "Database" },
+    { name: "Firebase", level: 82, icon: "Cloud" },
+    { name: "ChromaDB", level: 88, icon: "Layers" },
+    { name: "Oracle", level: 70, icon: "Database" },
   ],
   Tools: [
-    { name: "Figma", level: 90, icon: "PenTool" },
-    { name: "Git", level: 96, icon: "GitBranch" },
-    { name: "Jest", level: 84, icon: "CheckCircle" },
-    { name: "Storybook", level: 86, icon: "BookOpen" },
+    { name: "Git", level: 90, icon: "GitBranch" },
+    { name: "GitHub", level: 90, icon: "GitBranch" },
+    { name: "GitLab", level: 85, icon: "GitBranch" },
+    { name: "Grafana", level: 80, icon: "Layout" },
+    { name: "Apache POI", level: 75, icon: "FileCode" },
+    { name: "Agile / SCRUM", level: 85, icon: "Repeat" },
   ],
 };
+
+const PROJECT_IMAGE =
+  "https://images.unsplash.com/photo-1551288049-bebda4e38f71";
 
 export const projects = [
   {
     id: 1,
-    title: "Nexus Dashboard",
-    category: "SaaS",
+    title: "HR Intelligent Assistant",
+    category: "AI / ML",
     description:
-      "Enterprise analytics platform with real-time data visualization, role-based access control, and AI-powered insights.",
-    tags: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind"],
-    stats: { users: "50K+", performance: "99.9%", conversion: "+340%" },
+      "Autonomous AI agent with RAG that answers HR questions from verified company documents. Supports multilingual responses and integrates real-time API tools for holidays and currency conversion.",
+    tags: ["Python", "LangChain", "ChromaDB", "Streamlit", "Llama 3.3"],
+    stats: { users: "RAG", performance: "LangChain", conversion: "Multilingual" },
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/SarhaniFerdaous/HR-Intelligent-Assistant",
     featured: true,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    image: PROJECT_IMAGE,
   },
   {
     id: 2,
-    title: "Aura Commerce",
-    category: "E-Commerce",
+    title: "Soulier d'Or",
+    category: "AI / ML",
     description:
-      "Headless Shopify storefront with 3D product previews, AR try-on, and lightning-fast checkout.",
-    tags: ["React", "Three.js", "Shopify API", "Framer Motion"],
-    stats: { users: "120K+", performance: "99.8%", conversion: "+210%" },
+      "AI-powered football experience platform with vote-prediction and user-segmentation ML models deployed as REST APIs, Grafana dashboards, and ML-driven push notifications.",
+    tags: ["Python", "Deep Learning", "Grafana", "LangChain", "REST APIs"],
+    stats: { users: "2 Models", performance: "Grafana", conversion: "REST APIs" },
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://gitlab.com/pfe/SoulierDOr",
     featured: true,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    image: PROJECT_IMAGE,
   },
   {
     id: 3,
-    title: "Orbit Social",
-    category: "Social",
+    title: "InfoZone",
+    category: "Web Development",
     description:
-      "Real-time community platform with WebSocket feeds, collaborative docs, and gamified engagement.",
-    tags: ["Next.js", "Socket.io", "Redis", "Prisma"],
-    stats: { users: "25K+", performance: "99.7%", conversion: "+180%" },
+      "Full-stack e-commerce marketplace with product management, order processing, payments, and user authentication. Includes Power BI dashboards and bilingual Arabic/French support.",
+    tags: ["React", "Node.js", "Firebase", "Power BI", "Bootstrap"],
+    stats: { users: "E-Commerce", performance: "Firebase", conversion: "Power BI" },
     liveUrl: "#",
     githubUrl: "#",
     featured: true,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    image: PROJECT_IMAGE,
   },
   {
     id: 4,
-    title: "Zenith Health",
-    category: "Healthcare",
+    title: "Essectify",
+    category: "Mobile",
     description:
-      "Telemedicine app with HIPAA-compliant video calls, appointment scheduling, and EHR integration.",
-    tags: ["React Native", "Node.js", "WebRTC", "AWS"],
-    stats: { users: "10K+", performance: "99.9%", conversion: "+150%" },
+      "Android app for managing teacher schedules and absences with automated Excel report generation via Apache POI and Firebase push notifications.",
+    tags: ["Java", "Android Studio", "Firestore", "Apache POI"],
+    stats: { users: "Android", performance: "Firestore", conversion: "Excel Reports" },
     liveUrl: "#",
     githubUrl: "#",
     featured: false,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    image: PROJECT_IMAGE,
   },
   {
     id: 5,
-    title: "Flux Finance",
-    category: "Fintech",
+    title: "Quiz Generator Platform",
+    category: "Backend",
     description:
-      "Crypto portfolio tracker with real-time price feeds, yield farming calculators, and tax reporting.",
-    tags: ["Next.js", "Ethers.js", "The Graph", "Tailwind"],
-    stats: { users: "35K+", performance: "99.8%", conversion: "+275%" },
+      "Quiz management system with role-based access control (admin/teacher/student), result tracking, performance analytics, and a JavaFX XML-driven UI.",
+    tags: ["Java", "JavaFX", "Maven", "XML"],
+    stats: { users: "3 Roles", performance: "JavaFX", conversion: "Maven" },
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/SarhaniFerdaous/QuizGenerator",
     featured: false,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    image: PROJECT_IMAGE,
   },
   {
     id: 6,
-    title: "Voyage Travel",
-    category: "Travel",
+    title: "CVGEN",
+    category: "Web Development",
     description:
-      "AI trip planner with dynamic itineraries, collaborative planning, and local experience bookings.",
-    tags: ["React", "OpenAI", "Mapbox", "Stripe"],
-    stats: { users: "18K+", performance: "99.6%", conversion: "+190%" },
+      "Web application for creating, customizing, and exporting professional CVs in PDF and HTML formats with live preview and MVC architecture.",
+    tags: ["PHP", "MySQL", "PDO", "MVC"],
+    stats: { users: "PDF/HTML", performance: "MVC", conversion: "MySQL" },
     liveUrl: "#",
     githubUrl: "#",
     featured: false,
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    image: PROJECT_IMAGE,
   },
 ];
 
 export const projectCategories = [
   "All",
-  "SaaS",
-  "E-Commerce",
-  "Social",
-  "Healthcare",
-  "Fintech",
-  "Travel",
+  "AI / ML",
+  "Web Development",
+  "Mobile",
+  "Backend",
 ];
 
 export const services = [

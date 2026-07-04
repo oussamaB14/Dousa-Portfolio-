@@ -30,7 +30,7 @@ export default function Footer() {
             <AtSign className="h-4 w-4" />
           </a>
           <a
-            href={personalInfo.twitter}
+            href={personalInfo.gitlab}
             target="_blank"
             rel="noopener"
             className="p-2 rounded-lg bg-[var(--input-bg)] text-[var(--text-muted)] hover:text-[var(--text-heading)] transition-colors"
