@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Send, Mail, MapPin, MessageCircle, Calendar, CheckCircle, Loader2 } from "lucide-react";
+import { Send, Mail, MapPin, MessageCircle, GitBranch, CheckCircle, Loader2 } from "lucide-react";
 import { personalInfo } from "@/lib/data";
 import SectionHeading from "@/components/section-heading";
 
@@ -78,13 +78,13 @@ export default function ContactPage() {
                   <p className="text-sm text-[var(--text-muted)]">{personalInfo.phone}</p>
                 </div>
               </a>
-              <a href={personalInfo.calendly} target="_blank" rel="noopener" className="flex items-center gap-4 p-4 rounded-xl border border-[var(--border)] bg-[var(--card-bg)] hover:border-violet-500/20 transition-colors group">
+              <a href={personalInfo.gitlab} target="_blank" rel="noopener" className="flex items-center gap-4 p-4 rounded-xl border border-[var(--border)] bg-[var(--card-bg)] hover:border-violet-500/20 transition-colors group">
                 <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-violet-500/10 text-violet-400 group-hover:bg-violet-500/20 transition-colors">
-                  <Calendar className="h-5 w-5" />
+                  <GitBranch className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-[var(--text-heading)]">Schedule a Call</p>
-                  <p className="text-sm text-[var(--text-muted)]">Book via Calendly</p>
+                  <p className="text-sm font-medium text-[var(--text-heading)]">GitLab</p>
+                  <p className="text-sm text-[var(--text-muted)]">View my repositories</p>
                 </div>
               </a>
               <div className="flex items-center gap-4 p-4 rounded-xl border border-[var(--border)] bg-[var(--card-bg)]">
@@ -100,7 +100,7 @@ export default function ContactPage() {
 
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 px-4 py-2 text-sm text-emerald-400">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              Currently available for new projects
+              Open to internships in Data Engineering, ML & AI
             </div>
           </motion.div>
 

@@ -40,7 +40,7 @@ export default function Navbar() {
               <Code2 className="h-5 w-5" />
             </div>
             <span className="text-lg font-semibold tracking-tight">
-              Muddsar<span className="text-sky-400">.</span>
+              Ferdaous<span className="text-sky-400">.</span>
             </span>
           </Link>
 
