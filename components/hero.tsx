@@ -8,7 +8,10 @@ import { heroRoles } from "@/lib/data";
 function RoleChanger() {
   const [index, setIndex] = useState(0);
   useEffect(() => {
-    const i = setInterval(() => setIndex((p) => (p + 1) % heroRoles.length), 3000);
+    const i = setInterval(
+      () => setIndex((p) => (p + 1) % heroRoles.length),
+      3000,
+    );
     return () => clearInterval(i);
   }, []);
   return (
@@ -47,7 +50,7 @@ export default function Hero() {
           transition={{ delay: 0.1 }}
           className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-4 text-[var(--text-heading)]"
         >
-          <span className="text-gradient">Muddsar Qayyum</span>
+          <span className="text-gradient">Ferdaous Sarhani</span>
         </motion.h1>
 
         <motion.div
@@ -65,7 +68,9 @@ export default function Hero() {
           transition={{ delay: 0.3 }}
           className="mx-auto max-w-2xl text-base sm:text-lg text-[var(--text-muted)] mb-10 leading-relaxed"
         >
-          Senior Full-Stack Developer crafting premium digital experiences with React, Next.js, and modern technologies. I turn complex problems into elegant solutions.
+          Senior Full-Stack Developer crafting premium digital experiences with
+          React, Next.js, and modern technologies. I turn complex problems into
+          elegant solutions.
         </motion.p>
 
         <motion.div
@@ -74,13 +79,23 @@ export default function Hero() {
           transition={{ delay: 0.4 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Link href="/contact" className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-violet-500 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition-all hover:shadow-sky-500/40">
-            Hire Me <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          <Link
+            href="/contact"
+            className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-500 to-violet-500 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-sky-500/20 transition-all hover:shadow-sky-500/40"
+          >
+            Hire Me{" "}
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
-          <Link href="/projects" className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--input-bg)] px-8 py-3.5 text-sm font-semibold text-[var(--text)] hover:bg-[var(--surface-hover)] transition-colors">
+          <Link
+            href="/projects"
+            className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--input-bg)] px-8 py-3.5 text-sm font-semibold text-[var(--text)] hover:bg-[var(--surface-hover)] transition-colors"
+          >
             View Projects
           </Link>
-          <a href="/resume.pdf" className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--input-bg)] px-8 py-3.5 text-sm font-semibold text-[var(--text)] hover:bg-[var(--surface-hover)] transition-colors">
+          <a
+            href="/resume.pdf"
+            className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--input-bg)] px-8 py-3.5 text-sm font-semibold text-[var(--text)] hover:bg-[var(--surface-hover)] transition-colors"
+          >
             <Download className="h-4 w-4" /> Resume
           </a>
         </motion.div>

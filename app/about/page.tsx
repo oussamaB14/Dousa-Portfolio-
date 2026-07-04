@@ -2,16 +2,33 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Briefcase, Award, Target, Lightbulb, ChevronRight } from "lucide-react";
+import {
+  Briefcase,
+  Award,
+  Target,
+  Lightbulb,
+  ChevronRight,
+} from "lucide-react";
 import { experienceTimeline, personalInfo } from "@/lib/data";
 import SectionHeading from "@/components/section-heading";
 
-function AnimatedCounter({ target, suffix }: { target: number; suffix: string }) {
+function AnimatedCounter({
+  target,
+  suffix,
+}: {
+  target: number;
+  suffix: string;
+}) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
   const [started, setStarted] = useState(false);
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => { if (entry.isIntersecting) setStarted(true); }, { threshold: 0.5 });
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setStarted(true);
+      },
+      { threshold: 0.5 },
+    );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
@@ -21,12 +38,20 @@ function AnimatedCounter({ target, suffix }: { target: number; suffix: string })
     const step = Math.ceil(target / 40);
     const interval = setInterval(() => {
       current += step;
-      if (current >= target) { current = target; clearInterval(interval); }
+      if (current >= target) {
+        current = target;
+        clearInterval(interval);
+      }
       setCount(current);
     }, 30);
     return () => clearInterval(interval);
   }, [started, target]);
-  return <span ref={ref}>{count}{suffix}</span>;
+  return (
+    <span ref={ref}>
+      {count}
+      {suffix}
+    </span>
+  );
 }
 
 export default function AboutPage() {
@@ -46,40 +71,68 @@ export default function AboutPage() {
         >
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-[var(--text-heading)]">
-              Passionate about crafting <span className="text-gradient">exceptional digital experiences</span>
+              Passionate about crafting{" "}
+              <span className="text-gradient">
+                exceptional digital experiences
+              </span>
             </h3>
             <p className="text-[var(--text-muted)] leading-relaxed">
-              I&apos;m Muddsar Qayyum, a Senior Full-Stack Developer with over {personalInfo.yearsOfExperience} years of experience building premium web applications. I specialize in React, Next.js, and modern JavaScript ecosystems, delivering products that are fast, accessible, and beautiful.
+              I&apos;m Ferdaous Sarhani, a Senior Full-Stack Developer with over{" "}
+              {personalInfo.yearsOfExperience} years of experience building
+              premium web applications. I specialize in React, Next.js, and
+              modern JavaScript ecosystems, delivering products that are fast,
+              accessible, and beautiful.
             </p>
             <p className="text-[var(--text-muted)] leading-relaxed">
-              My approach combines technical excellence with design sensibility. I believe great software is born at the intersection of performance, usability, and visual craft. Every pixel, every interaction, every millisecond matters.
+              My approach combines technical excellence with design sensibility.
+              I believe great software is born at the intersection of
+              performance, usability, and visual craft. Every pixel, every
+              interaction, every millisecond matters.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="rounded-xl border border-[var(--border)] bg-[var(--card-bg)] p-4">
                 <Briefcase className="h-5 w-5 text-sky-400 mb-2" />
-                <p className="text-lg font-semibold text-[var(--text-heading)]">8+ Years</p>
-                <p className="text-xs text-[var(--text-muted)]">Professional Experience</p>
+                <p className="text-lg font-semibold text-[var(--text-heading)]">
+                  8+ Years
+                </p>
+                <p className="text-xs text-[var(--text-muted)]">
+                  Professional Experience
+                </p>
               </div>
               <div className="rounded-xl border border-[var(--border)] bg-[var(--card-bg)] p-4">
                 <Award className="h-5 w-5 text-violet-400 mb-2" />
-                <p className="text-lg font-semibold text-[var(--text-heading)]">12 Awards</p>
-                <p className="text-xs text-[var(--text-muted)]">Industry Recognition</p>
+                <p className="text-lg font-semibold text-[var(--text-heading)]">
+                  12 Awards
+                </p>
+                <p className="text-xs text-[var(--text-muted)]">
+                  Industry Recognition
+                </p>
               </div>
               <div className="rounded-xl border border-[var(--border)] bg-[var(--card-bg)] p-4">
                 <Target className="h-5 w-5 text-emerald-400 mb-2" />
-                <p className="text-lg font-semibold text-[var(--text-heading)]">100%</p>
-                <p className="text-xs text-[var(--text-muted)]">Client Satisfaction</p>
+                <p className="text-lg font-semibold text-[var(--text-heading)]">
+                  100%
+                </p>
+                <p className="text-xs text-[var(--text-muted)]">
+                  Client Satisfaction
+                </p>
               </div>
               <div className="rounded-xl border border-[var(--border)] bg-[var(--card-bg)] p-4">
                 <Lightbulb className="h-5 w-5 text-amber-400 mb-2" />
-                <p className="text-lg font-semibold text-[var(--text-heading)]">127+</p>
-                <p className="text-xs text-[var(--text-muted)]">Projects Completed</p>
+                <p className="text-lg font-semibold text-[var(--text-heading)]">
+                  127+
+                </p>
+                <p className="text-xs text-[var(--text-muted)]">
+                  Projects Completed
+                </p>
               </div>
             </div>
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-xl font-semibold text-[var(--text-heading)] mb-6">Experience</h3>
+            <h3 className="text-xl font-semibold text-[var(--text-heading)] mb-6">
+              Experience
+            </h3>
             <div ref={ref} className="space-y-6">
               {experienceTimeline.map((exp, i) => (
                 <motion.div
@@ -90,13 +143,24 @@ export default function AboutPage() {
                   className="relative pl-6 border-l border-[var(--border)]"
                 >
                   <div className="absolute -left-[5px] top-1 w-2.5 h-2.5 rounded-full bg-sky-500 ring-4 ring-sky-500/20" />
-                  <p className="text-xs text-sky-400 font-medium mb-1">{exp.year}</p>
-                  <h4 className="text-base font-semibold text-[var(--text-heading)]">{exp.role}</h4>
-                  <p className="text-sm text-[var(--text-muted)] mb-2">{exp.company}</p>
-                  <p className="text-sm text-[var(--text-muted)] leading-relaxed">{exp.description}</p>
+                  <p className="text-xs text-sky-400 font-medium mb-1">
+                    {exp.year}
+                  </p>
+                  <h4 className="text-base font-semibold text-[var(--text-heading)]">
+                    {exp.role}
+                  </h4>
+                  <p className="text-sm text-[var(--text-muted)] mb-2">
+                    {exp.company}
+                  </p>
+                  <p className="text-sm text-[var(--text-muted)] leading-relaxed">
+                    {exp.description}
+                  </p>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {exp.highlights.map((h) => (
-                      <span key={h} className="inline-flex items-center gap-1 text-xs text-[var(--text-muted)] bg-[var(--input-bg)] px-2 py-1 rounded-md">
+                      <span
+                        key={h}
+                        className="inline-flex items-center gap-1 text-xs text-[var(--text-muted)] bg-[var(--input-bg)] px-2 py-1 rounded-md"
+                      >
                         <ChevronRight className="h-3 w-3 text-sky-500" /> {h}
                       </span>
                     ))}
