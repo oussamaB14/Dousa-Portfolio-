@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Sparkles } from "lucide-react";
 import { heroBio, heroRoles } from "@/lib/data";
@@ -42,6 +43,27 @@ export default function Hero() {
         >
           <Sparkles className="h-3.5 w-3.5 text-sky-400" />
           Open to internships & junior roles
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.05, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="relative mx-auto mb-8 w-fit"
+        >
+          <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-sky-500 via-violet-500 to-sky-400 opacity-80 blur-sm" />
+          <div className="relative rounded-full bg-gradient-to-br from-sky-500 to-violet-500 p-[3px] shadow-lg shadow-sky-500/20">
+            <div className="relative h-28 w-28 sm:h-36 sm:w-36 overflow-hidden rounded-full border-2 border-[var(--bg)] bg-[var(--card-bg)]">
+              <Image
+                src="/profile-pic.png"
+                alt="Ferdaous Sarhani"
+                fill
+                priority
+                className="object-cover object-top"
+                sizes="(max-width: 640px) 112px, 144px"
+              />
+            </div>
+          </div>
         </motion.div>
 
         <motion.h1
